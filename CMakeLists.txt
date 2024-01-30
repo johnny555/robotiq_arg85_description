@@ -1,36 +1,24 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.22)
 project(robotiq_arg85_description)
 
-## Find catkin macros and libraries
-find_package(catkin REQUIRED)
+find_package(ament_cmake REQUIRED)
 
-catkin_package()
+ament_package()
 
 #############
 ## Install ##
 #############
 
 install(DIRECTORY launch/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
+  DESTINATION share/${PROJECT_NAME})
 
 install(DIRECTORY meshes/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
-)
+  DESTINATION share/${PROJECT_NAME})
 
 install(DIRECTORY robots/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
+  DESTINATION share/${PROJECT_NAME})
 
 install(FILES urdf.rviz
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+  DESTINATION share/${PROJECT_NAME})
 
-#############
-## Testing ##
-#############
 
-if (CATKIN_ENABLE_TESTING)
-  find_package(roslaunch REQUIRED)
-  roslaunch_add_file_check(launch)
-endif()

@@ -21,7 +21,7 @@
     type="robot_state_publisher" />
   <node
     name="rviz"
-    pkg="rviz"
-    type="rviz"
+    pkg="rviz2"
+    type="rviz2"
     args="-d $(find robotiq_arg85_description)/urdf.rviz" />
 </launch>
