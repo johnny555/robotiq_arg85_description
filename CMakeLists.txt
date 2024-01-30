@@ -10,13 +10,13 @@ ament_package()
 #############
 
 install(DIRECTORY launch/
-  DESTINATION share/${PROJECT_NAME})
+  DESTINATION share/${PROJECT_NAME}/launch)
 
 install(DIRECTORY meshes/
-  DESTINATION share/${PROJECT_NAME})
+  DESTINATION share/${PROJECT_NAME}/meshes)
 
 install(DIRECTORY robots/
-  DESTINATION share/${PROJECT_NAME})
+  DESTINATION share/${PROJECT_NAME}/robots/)
 
 install(FILES urdf.rviz
   DESTINATION share/${PROJECT_NAME})
